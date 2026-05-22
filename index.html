@@ -1,0 +1,263 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fbbf24">
+    <meta name="description" content="Professional live band in Lagos for weddings, parties, and corporate events">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/Johnsonmega logo.png">
+    <title>JOHNSONMEGA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .hero { 
+        background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                            url('https://source.unsplash.com/random/1920x1080/?band,stage'); 
+        background-size: cover;
+        background-position: center;
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <body class="bg-zinc-950 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-black/95 backdrop-blur-md z-50 border-b border-zinc-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+            <img src="images/Johnsonmega logo.png" alt="Echo Band Logo" class="h-16 w-auto">
+            <!-- If you want the band name beside the logo, uncomment below -->
+            <!-- <h1 class="text-3xl font-bold tracking-tighter">ECHO BAND</h1> -->
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button onclick="toggleMenu()" class="md:hidden text-white text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Menu -->
+        <div class="hidden absolute top-full left-0 w-full bg-black/95 p-4 flex-col space-y-4 md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent md:p-0 md:flex md:flex-row md:space-y-0 md:space-x-8 text-lg" id="mobile-menu">
+            <button onclick="toggleMenu()" class="self-end text-white text-2xl mb-4 md:hidden"><i class="fas fa-times"></i></button>
+            <a href="#about" class="hover:text-amber-400 transition">About Us</a>
+            <a href="#services" class="hover:text-amber-400 transition">Services</a>
+            <a href="#testimonials" class="hover:text-amber-400 transition">Testimonials</a>
+            <a href="#gallery" class="hover:text-amber-400 transition">Gallery</a>
+            <a href="#contact" class="hover:text-amber-400 transition">Contact Us</a>
+        </div>
+
+        <!-- Menu Backdrop -->
+        <div class="hidden fixed inset-0 bg-black/50 z-40 md:hidden" id="menu-backdrop" onclick="toggleMenu()"></div>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Floating Button + Chat Bubble -->
+<div class="fixed bottom-5 right-5 flex items-center space-x-3 z-50">
+
+    <!-- Chat Bubble -->
+    <div class="bg-white text-gray-800 text-sm px-3 py-2 rounded-lg shadow-md">
+        Chat with us
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/+2349163314182?text=Hello%20I%20want%20to%20know%20more%20about%20booking%20Echo%20Band!"
+        target="_blank"
+        class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg">
+
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</div>
+
+    <!-- Hero -->
+    <section class="hero h-screen flex items-center justify-center text-center">
+        <div class="max-w-3xl px-4 sm:px-6">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6">LIVE MUSIC<br>THAT HITS DIFFERENT</h1>
+        <p class="text-lg sm:text-2xl text-zinc-300 mb-10">Professional band in Lagos ready to elevate your event</p>
+        <a href="#contact" 
+            class="inline-block bg-amber-400 text-black px-8 sm:px-12 py-4 sm:py-5 rounded-full text-lg sm:text-2xl font-semibold hover:bg-white transition">
+            Book Us Now
+        </a>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-16 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto">
+        <h2 class="text-4xl sm:text-5xl font-bold text-center mb-12">About Us</h2>
+        <div class="text-xl text-zinc-400 leading-relaxed space-y-8">
+        <p>
+            We are a dynamic 5-piece professional live band based in Lagos, Nigeria. 
+            With years of experience performing at weddings, corporate events, parties, and festivals.
+        </p>
+        <p>
+            We blend Afrobeat, Highlife, Afropop, and current hits to create the perfect atmosphere for any occasion. 
+            Our mission is to make every event unforgettable with live music that moves people.
+        </p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 sm:py-24 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">Our Services</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="bg-zinc-800 p-10 rounded-3xl text-center">
+            <i class="fa-solid fa-ring text-5xl text-amber-400 mb-6"></i>
+            <h3 class="text-3xl font-semibold mb-3">Weddings</h3>
+            <p class="text-zinc-400">Ceremony, reception, and after-party performances.</p>
+            </div>
+            <div class="bg-zinc-800 p-10 rounded-3xl text-center">
+            <i class="fa-solid fa-champagne-glasses text-5xl text-amber-400 mb-6"></i>
+            <h3 class="text-3xl font-semibold mb-3">Private Parties</h3>
+            <p class="text-zinc-400">Birthdays, anniversaries, and celebrations.</p>
+            </div>
+            <div class="bg-zinc-800 p-10 rounded-3xl text-center">
+            <i class="fa-solid fa-building text-5xl text-amber-400 mb-6"></i>
+            <h3 class="text-3xl font-semibold mb-3">Corporate Events</h3>
+            <p class="text-zinc-400">Product launches, conferences, and end-of-year parties.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto">
+        <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">What Clients Say</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-zinc-900 p-8 rounded-3xl">
+            <p class="text-lg italic mb-6">"Echo Band made our wedding magical. They played all our favorite songs and kept the dance floor packed all night!"</p>
+            <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-amber-400 rounded-full"></div>
+            <div>
+                <p class="font-semibold">Adeola & Chinedu</p>
+                <p class="text-sm text-zinc-500">Lekki Wedding • 2026</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="bg-zinc-900 p-8 rounded-3xl">
+            <p class="text-lg italic mb-6">"Extremely professional and talented. Our corporate event was a huge success thanks to them."</p>
+            <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-amber-400 rounded-full"></div>
+            <div>
+                <p class="font-semibold">Oluwaseun Adebayo</p>
+                <p class="text-sm text-zinc-500">Zenith Corp</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="bg-zinc-900 p-8 rounded-3xl">
+            <p class="text-lg italic mb-6">"They turned my birthday into a proper concert! Best live band in Lagos!"</p>
+            <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-amber-400 rounded-full"></div>
+            <div>
+                <p class="font-semibold">Funke Williams</p>
+                <p class="text-sm text-zinc-500">Ikoyi • April 2026</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+        <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">Gallery</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <img src="https://source.unsplash.com/random/800x600/?band,performance,1" alt="Band performance" class="w-full h-48 sm:h-64 object-cover rounded-3xl">
+            <img src="https://source.unsplash.com/random/800x600/?band,stage,2" alt="Live music on stage" class="w-full h-48 sm:h-64 object-cover rounded-3xl">
+            <img src="https://source.unsplash.com/random/800x600/?concert,crowd,3" alt="Concert crowd" class="w-full h-48 sm:h-64 object-cover rounded-3xl">
+            <img src="https://source.unsplash.com/random/800x600/?musicians,instruments,4" alt="Band musicians" class="w-full h-48 sm:h-64 object-cover rounded-3xl">
+            <img src="https://source.unsplash.com/random/800x600/?wedding,band,5" alt="Wedding performance" class="w-full h-48 sm:h-64 object-cover rounded-3xl">
+            <img src="https://source.unsplash.com/random/800x600/?party,music,6" alt="Party event" class="w-full h-48 sm:h-64 object-cover rounded-3xl">
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-16 sm:py-24 px-4 sm:px-6 max-w-3xl mx-auto bg-zinc-900">
+        <h2 class="text-4xl sm:text-5xl font-bold text-center mb-12">Contact Us / Book Now</h2>
+        
+        <form class="space-y-8" onsubmit="handleSubmit(event)">
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+            <label class="block text-sm mb-2">Your Name</label>
+            <input type="text" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-400" required>
+            </div>
+            <div>
+            <label class="block text-sm mb-2">Phone / WhatsApp</label>
+            <input type="tel" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-400" required>
+            </div>
+        </div>
+
+        <div>
+            <label class="block text-sm mb-2">Event Type</label>
+            <select class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-400">
+            <option>Wedding</option>
+            <option>Birthday / Private Party</option>
+            <option>Corporate Event</option>
+            <option>Other</option>
+            </select>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+            <label class="block text-sm mb-2">Preferred Date</label>
+            <input type="date" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-400" required>
+            </div>
+            <div>
+            <label class="block text-sm mb-2">Venue Location</label>
+            <input type="text" placeholder="e.g. Lekki, Ikoyi, Abuja" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-400" required>
+            </div>
+        </div>
+
+        <div>
+            <label class="block text-sm mb-2">Message / Song Requests</label>
+            <textarea rows="5" class="w-full bg-zinc-800 border border-zinc-700 rounded-3xl px-6 py-4 focus:outline-none focus:border-amber-400"></textarea>
+        </div>
+
+        <button type="submit" 
+                class="w-full bg-amber-400 hover:bg-white text-black py-6 text-xl font-semibold rounded-3xl transition">
+            Send Booking Request
+        </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 sm:py-16 text-center">
+        <p class="text-xl sm:text-2xl mb-4">Let's make your event legendary</p>
+        <p class="text-zinc-400 mb-8">📍 Lagos, Nigeria</p>
+        <p class="text-3xl mb-6">
+        <a href="tel:+234 916 331 4182" class="hover:text-amber-400">Call/WhatsApp: +234 916 331 4182</a>
+        </p>
+        <p class="text-zinc-500">© 2026 Echo Band • Professional Live Music</p>
+    </footer>
+
+    <script>
+        function handleSubmit(e) {
+        e.preventDefault();
+        alert("✅ Thank you! Your booking request has been received. We'll reply within 24 hours.");
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const backdrop = document.getElementById('menu-backdrop');
+            menu.classList.toggle('hidden');
+            backdrop.classList.toggle('hidden');
+        }
+
+        // Register service worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then((registration) => {
+                    console.log('Service Worker registered');
+                })
+                .catch((error) => {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+    </body>
+    </html>
