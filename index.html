@@ -35,6 +35,15 @@
             <!-- <h1 class="text-3xl font-bold tracking-tighter">ECHO BAND</h1> -->
         </a>
 
+            <!-- DESKTOP MENU (VISIBLE ON PC) -->
+      <div class="hidden md:flex flex-wrap gap-6 mt-4 text-lg justify-start">
+        <a href="#about" class="hover:text-amber-400">About Us</a>
+        <a href="#services" class="hover:text-amber-400">Our Services</a>
+        <a href="#testimonials" class="hover:text-amber-400">Testimonials</a>
+        <a href="#gallery" class="hover:text-amber-400">Gallery</a>
+        <a href="#contact" class="hover:text-amber-400">Contact Us</a>
+    </div>
+
         <!-- Mobile Menu Button -->
         <button onclick="toggleMenu()" class="md:hidden text-white text-2xl">
             <i class="fas fa-bars"></i>
@@ -66,18 +75,17 @@ class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col spac
 </div> -->
 
         <!-- Mobile Menu -->
- <div id="mobile-menu"
- class="hidden flex-col bg-black/95 backdrop-blur-xl border-t border-zinc-800 px-6 py-8 space-y-6 text-xl md:hidden"
-       <!-- class="hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-md p-6 z-50 flex-col space-y-6 text-white text-xl md:relative md:flex md:flex-row md:space-y-0 md:space-x-8 md:bg-transparent md:p-0">    -->
+<div id="mobile-menu"
+class="hidden md:hidden absolute top-full left-0 w-full bg-black/95 border-t border-zinc-800 flex flex-col px-6 py-6 space-y-4 text-lg">
 
-    <!-- Close Button -->
-    <button onclick="toggleMenu()"
-            class="self-end text-3xl md:hidden">
+    <!-- class="hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-md p-6 z-50 flex-col space-y-6 text-white text-xl md:relative md:flex md:flex-row md:space-y-0 md:space-x-8 md:bg-transparent md:p-0">    -->
+    <!-- Close Button (ONLY ONE) -->
+    <button onclick="toggleMenu()" class="absolute top-6 right-6 text-3xl">
         <i class="fas fa-times"></i>
     </button>
 
 
-    <a href="#about" onclick="toggleMenu()" class="block text-2xl hover:text-amber-400">About Us</a>
+    <!-- <a href="#about" onclick="toggleMenu()" class="block text-2xl hover:text-amber-400">About Us</a>
 
     <a href="#services" onclick="toggleMenu()" class="block text-2xl hover:text-amber-400">Services</a>
 
@@ -87,8 +95,15 @@ class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col spac
     </a>
 
     <a href="#contact" onclick="toggleMenu()" class="block text-2xl hover:text-amber-400">
-    </a>
-</div> 
+    </a> -->
+
+    <a href="#about" onclick="toggleMenu()" class="hover:text-amber-400">About Us</a>
+    <a href="#services" onclick="toggleMenu()" class="hover:text-amber-400">Services</a>
+    <a href="#testimonials" onclick="toggleMenu()" class="hover:text-amber-400">Testimonials</a>
+    <a href="#gallery" onclick="toggleMenu()" class="hover:text-amber-400">Gallery</a>
+    <a href="#contact" onclick="toggleMenu()" class="hover:text-amber-400">Contact Us</a>
+
+</div>
 
         <!-- Menu Backdrop -->
         <div class="hidden fixed inset-0 bg-black/50 z-40 md:hidden" id="menu-backdrop" onclick="toggleMenu()"></div>
@@ -294,7 +309,19 @@ class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col spac
             backdrop.classList.toggle('hidden');
         }
     </script>
+
+<script>
+function toggleMenu() {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+}
+
+function closeMenu() {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.add("hidden");
+}
+</script>
     <script>
+        
 
 
         // Register service worker for PWA
