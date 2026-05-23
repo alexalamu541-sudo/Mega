@@ -285,7 +285,7 @@ class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col spac
 
 
     
-<!-- <script>
+<script>
 function toggleMenu() {
     const menu = document.getElementById("mobile-menu");
     const isHidden = menu.classList.contains("hidden");
@@ -300,21 +300,9 @@ function toggleMenu() {
         document.body.style.overflow = 'auto'; // Re-enable scrolling
     }
 }
-</script> -->
+</script>
 
-    <!-- <script>
-function toggleMenu() {
-    const menu = document.getElementById("mobile-menu");
 
-    if (menu.classList.contains("hidden")) {
-        menu.classList.remove("hidden");
-        menu.classList.add("flex");
-    } else {
-        menu.classList.add("hidden");
-        menu.classList.remove("flex");
-    }
-}
-</script>  -->
 
         <script>
         function handleSubmit(e) {
@@ -328,17 +316,20 @@ function toggleMenu() {
             menu.classList.toggle('hidden');
             backdrop.classList.toggle('hidden');
         }
+    </script>
+    <script>
 
-        // // Register service worker for PWA
-        // if ('serviceWorker' in navigator) {
-        //     navigator.serviceWorker.register('sw.js')
-        //         .then((registration) => {
-        //             console.log('Service Worker registered');
-        //         })
-        //         .catch((error) => {
-        //             console.log('Service Worker registration failed:', error);
-        //         });
-        // }
+
+        // Register service worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then((registration) => {
+                    console.log('Service Worker registered');
+                })
+                .catch((error) => {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
     </script>
     </body>
     </html>
