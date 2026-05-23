@@ -23,7 +23,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
-    <body class="bg-zinc-950 text-white">
+    <body class="bg-zinc-950 text-white overflow-x-hidden">
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-black/95 backdrop-blur-md z-50 border-b border-zinc-800">
@@ -50,7 +50,7 @@
             <a href="#contact" class="hover:text-amber-400 transition">Contact Us</a> 
         </div> -->
 
-        <div id="mobile-menu"
+        <!-- <div id="mobile-menu"
 class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col space-y-6 text-lg md:relative md:flex md:flex-row md:space-y-0 md:space-x-8 md:bg-transparent md:p-0">
 
     <button onclick="toggleMenu()" class="self-end text-white text-2xl md:hidden">
@@ -63,7 +63,7 @@ class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col spac
     <a href="#gallery" class="block hover:text-amber-400">Gallery</a>
     <a href="#contact" class="block hover:text-amber-400">Contact Us</a>
 
-</div>
+</div> -->
 
         <!-- Mobile Menu -->
  <div id="mobile-menu"
@@ -77,24 +77,16 @@ class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col spac
     </button>
 
 
-    <a href="#about" class="block hover:text-amber-400 transition duration-300">
-        About Us
+    <a href="#about" onclick="toggleMenu()" class="block text-2xl hover:text-amber-400">About Us</a>
+
+    <a href="#services" onclick="toggleMenu()" class="block text-2xl hover:text-amber-400">Services</a>
+
+    <a href="#testimonials" onclick="toggleMenu()" class="block text-2xl hover:text-amber-400">Testimonials</a>
+
+    <a href="#gallery" onclick="toggleMenu()" class="block text-2xl hover:text-amber-400">Gallery</a>
     </a>
 
-    <a href="#services" class="block hover:text-amber-400 transition duration-300">
-        Services
-    </a>
-
-    <a href="#testimonials" class="block hover:text-amber-400 transition duration-300">
-        Testimonials
-    </a>
-
-    <a href="#gallery" class="block hover:text-amber-400 transition duration-300">
-        Gallery
-    </a>
-
-    <a href="#contact" class="block hover:text-amber-400 transition duration-300">
-        Contact Us
+    <a href="#contact" onclick="toggleMenu()" class="block text-2xl hover:text-amber-400">
     </a>
 </div> 
 
@@ -122,19 +114,19 @@ class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col spac
 </div>
 
     <!-- Hero -->
-    <section class="hero h-screen flex items-center justify-center text-center">
+    <section class="hero min-h-screen flex items-center justify-center text-center px-4">
         <div class="max-w-3xl px-4 sm:px-6">
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6">LIVE MUSIC<br>THAT HITS DIFFERENT</h1>
         <p class="text-lg sm:text-2xl text-zinc-300 mb-10">Professional band in Lagos ready to elevate your event</p>
         <a href="#contact" 
-            class="inline-block bg-amber-400 text-black px-8 sm:px-12 py-4 sm:py-5 rounded-full text-lg sm:text-2xl font-semibold hover:bg-white transition">
+            class="inline-block bg-amber-400 text-black px-6 sm:px-12 py-4 sm:py-5 rounded-full text-lg sm:text-xl md:text-2xl font-semibold">
             Book Us Now
         </a>
         </div>
     </section>
 
     <!-- About Us -->
-    <section id="about" class="py-16 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto">
+    <section id="about" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <h2 class="text-4xl sm:text-5xl font-bold text-center mb-12">About Us</h2>
         <div class="text-xl text-zinc-400 leading-relaxed space-y-8">
         <p>
@@ -152,7 +144,7 @@ class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col spac
     <section id="services" class="py-16 sm:py-24 bg-zinc-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">Our Services</h2>
-        <div class="grid md:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-zinc-800 p-10 rounded-3xl text-center">
             <i class="fa-solid fa-ring text-5xl text-amber-400 mb-6"></i>
             <h3 class="text-3xl font-semibold mb-3">Weddings</h3>
@@ -175,7 +167,7 @@ class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col spac
     <!-- Testimonials -->
     <section id="testimonials" class="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto">
         <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">What Clients Say</h2>
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-zinc-900 p-8 rounded-3xl">
             <p class="text-lg italic mb-6">"Johnsonmega made our wedding magical. They played all our favorite songs and kept the dance floor packed all night!"</p>
             <div class="flex items-center gap-4">
@@ -214,7 +206,7 @@ class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col spac
     <!-- Gallery -->
     <section id="gallery" class="py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
         <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16">Gallery</h2>
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <img src="images/Mega yen.jpeg" alt="Band performance" class="w-full h-48 sm:h-64 object-cover rounded-3xl">
             <img src="https://source.unsplash.com/random/800x600/?band,stage,2" alt="Live music on stage" class="w-full h-48 sm:h-64 object-cover rounded-3xl">
             <img src="https://source.unsplash.com/random/800x600/?concert,crowd,3" alt="Concert crowd" class="w-full h-48 sm:h-64 object-cover rounded-3xl">
@@ -288,31 +280,7 @@ class="hidden absolute top-full left-0 w-full bg-black/95 p-6 flex flex-col spac
         <p class="text-zinc-500">© 2026 Johnsonmega Band • Professional Live Music</p>
     </footer>   
 
-
-
-
-
-
     
-<script>
-function toggleMenu() {
-    const menu = document.getElementById("mobile-menu");
-    const isHidden = menu.classList.contains("hidden");
-
-    if (isHidden) {
-        menu.classList.remove("hidden");
-        menu.classList.add("flex");
-        document.body.style.overflow = 'hidden'; // Stop background scrolling
-    } else {
-        menu.classList.add("hidden");
-        menu.classList.remove("flex");
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
-    }
-}
-</script>
-
-
-
         <script>
         function handleSubmit(e) {
         e.preventDefault();
