@@ -19,6 +19,30 @@
         background-position: center;
         }
         html { scroll-behavior: smooth; }
+        .slide {
+    opacity: 0;
+    animation: fade 15s infinite;
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
     </style>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -149,8 +173,8 @@ class="hidden md:hidden absolute top-full left-0 w-full bg-black/95 border-t bor
         <img src="images/Mega yen.jpeg"
         class="slide absolute w-full h-full object-cover">
 
-        <img src="images/Crowd.jpeg"
-        class="slide absolute w-full h-full object-cover">
+        <!-- <img src="images/Crowd.jpeg"
+        class="slide absolute w-full h-full object-cover"> -->
 
         <img src="images/Band musicians.jpeg"
         class="slide absolute w-full h-full object-cover">
